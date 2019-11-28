@@ -6,6 +6,8 @@ import Main from '../../pages/Main';
 import NewCompany from '../../pages/NewCompany';
 import SingIn from '../../pages/SingIn';
 import Dashboard from '../../pages/Dashboard';
+import Box from '../../pages/Box';
+import NewBox from '../../pages/NewBox';
 
 export default function Router() {
 
@@ -16,6 +18,9 @@ export default function Router() {
       <Switch>
         <Route path="/criar-empresa" component={NewCompany} />
         <Route path="/entrar" component={SingIn} />
+        { userState && <Route path="/caixa/new" component={NewBox} />}
+        { userState && <Route path="/caixa/1" component={Box} />}
+        
         { userState && <Route path="/" component={Dashboard} />}
         <Route exact path="*">
           {userState ? <Redirect to="/" /> : <Main />}
