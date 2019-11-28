@@ -2,12 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
-import Main from '../../pages/Main';
-import NewCompany from '../../pages/NewCompany';
-import SingIn from '../../pages/SingIn';
-import Dashboard from '../../pages/Dashboard';
-import Box from '../../pages/Box';
-import NewBox from '../../pages/NewBox';
+import { Main, NewCompany, SingIn, Dashboard, Box, NewBox } from '../pages'
 
 export default function Router() {
 

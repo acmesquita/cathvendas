@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
-import Header from '../../components/Header';
+import {Header} from '../../components';
 
 import { Container, Card } from './styles';
 

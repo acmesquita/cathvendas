@@ -3,8 +3,7 @@ import { useSelector } from 'react-redux';
 import Header from '../../components/Header';
 
 import { Container, Boxes } from './styles';
-import ItemBox from '../../components/ItemBox';
-import BoxPlus from '../../components/BoxPlus';
+import {ItemBox, BoxPlus} from '../../components';
 
 export default function Dashboard() {
 
