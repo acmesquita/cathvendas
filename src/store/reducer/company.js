@@ -11,7 +11,51 @@ export const { Types, Creators } = createActions({
 
 const INITIAL_STATE = {
   saldo: 0,
-  boxes: []
+  boxes: [
+    {
+      id: 1,
+      title: 'Caixa 01',
+      description: 'idfasdk dfaopsdh',
+      saldo: 100,
+      registries: [
+        {
+          id: 1,
+          description: 'Teste Entrada',
+          value: 1000,
+          date: '01/11/2019',
+          kind: 'in'
+        },
+        {
+          id: 3,
+          description: 'Teste Entrada',
+          value: 1000,
+          date: '01/11/2019',
+          kind: 'in'
+        },
+        {
+          id: 2,
+          description: 'Teste Saída',
+          value: 900,
+          date: '01/11/2019',
+          kind: 'out'
+        },
+        {
+          id: 4,
+          description: 'Teste Saída',
+          value: 900,
+          date: '01/11/2019',
+          kind: 'out'
+        },
+      ]
+    },
+    {
+      id: 2,
+      title: 'Caixa 02',
+      description: 'idfasdk dfaopsdh',
+      saldo: 1000,
+      registries: []
+    },
+  ]
 }
 
 const updateSaldo = (state = INITIAL_STATE, action) => {
@@ -19,7 +63,7 @@ const updateSaldo = (state = INITIAL_STATE, action) => {
 }
 // TODO - Refatorar
 const addBox = (state = INITIAL_STATE, action) => {
-  return { ...state, boxes: [ ...state.boxes, action.description ] }
+  return { ...state, boxes: [ ...state.boxes, action.box ] }
 }
 
 /**

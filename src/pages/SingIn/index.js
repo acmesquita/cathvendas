@@ -28,7 +28,7 @@ export default function SingIn() {
       <Card>
         <div className="field">
           <label>Usuário {userState}</label>
-          <input value={user} onChange={handleUser}/>
+          <input type="text" value={user} onChange={handleUser}/>
         </div>
         <button type="button" onClick={enter}>Entrar</button>
       </Card>

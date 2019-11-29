@@ -14,7 +14,7 @@ export default function Router() {
         <Route path="/criar-empresa" component={NewCompany} />
         <Route path="/entrar" component={SingIn} />
         { userState && <Route path="/caixa/new" component={NewBox} />}
-        { userState && <Route path="/caixa/1" component={Box} />}
+        { userState && <Route path="/caixa/:id" component={Box} />}
         
         { userState && <Route path="/" component={Dashboard} />}
         <Route exact path="*">

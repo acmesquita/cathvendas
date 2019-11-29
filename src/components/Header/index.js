@@ -11,7 +11,6 @@ export default function Header() {
   return (
     <Container>
       <h1>CathVendas</h1>
-      {console.log(user)}
       { user && (<Link to="/" className="link">Olá, {user}!</Link>)}
       { !user && (<Link to="/entrar" className="link">Entrar</Link>)}
     </Container>

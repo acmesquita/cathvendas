@@ -35,7 +35,7 @@ export const Card = styled.div`
     font-size: 16px;
     color: white;
     text-transform: uppercase;
-    width: 10%;
+    width: 25%;
     cursor: pointer;
   }
 `;

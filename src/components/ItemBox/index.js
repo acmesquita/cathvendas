@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 
 import { Container } from './styles';
 
-export default function ItemBox() {
+export default function ItemBox({ box }) {
   return (
     <Container>
-      <h3>Caixa 01</h3>
-      <p>idfkasjdbfksadbk sdjfhosadhfóasd</p>
-      <p>Saldo: R$ 100</p>
-      <Link to="/caixa/1">Acessar</Link>
+      <h3>{box.title}</h3>
+      <p>{box.description}</p>
+      <p>Saldo: R$ {box.saldo}</p>
+      <Link to={`/caixa/${box.id}`}>Acessar</Link>
     </Container>
   );
 }

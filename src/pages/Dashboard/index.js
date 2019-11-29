@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import Header from '../../components/Header';
 
-import { Container, Boxes } from './styles';
+import { Container, Boxes, MainBoxes } from './styles';
 import {ItemBox, BoxPlus} from '../../components';
 
 export default function Dashboard() {
@@ -16,16 +16,14 @@ export default function Dashboard() {
         <h2>Caixas</h2>
         <p>Saldo: R$ {company.saldo}</p>
       </Container>
-      <Boxes>
-        <BoxPlus />
-        <ItemBox />
-        <ItemBox />
-        <ItemBox />
-        <ItemBox />
-        <ItemBox />
-        <ItemBox />
-        <ItemBox />
-      </Boxes>
+      <MainBoxes>
+        <Boxes>
+          <BoxPlus />
+          { company.boxes.map(box => (
+            <ItemBox key={box.id} box={box}/>
+          ))}
+        </Boxes>
+      </MainBoxes>
     </>
   );
 }
