@@ -6,7 +6,7 @@ export default function TableInOut({ registries, total }) {
 
   return (
     <Container>
-      <table>
+      <table id="customers">
         <thead>
           <th>Descrição</th>
           <th>Data</th>
@@ -21,9 +21,9 @@ export default function TableInOut({ registries, total }) {
             </tr>
           ))}
           <tr className="total">
-            <td>TOTAL</td>
+            <td><b>TOTAL</b></td>
             <td></td>
-            <td>R$ {total}</td>
+            <td><b>R$ {total}</b></td>
           </tr>
         </tbody>
       </table>

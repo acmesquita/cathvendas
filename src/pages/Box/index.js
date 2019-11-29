@@ -3,7 +3,7 @@ import { Header, Breadcrumb, TableInOut } from '../../components';
 import { useParams } from "react-router-dom";
 import { useSelector } from 'react-redux';
 
-// import { Container } from './styles';
+import { Container, Div } from './styles';
 
 export default function Box() {
 
@@ -21,9 +21,13 @@ export default function Box() {
     <>
       <Header />
       <Breadcrumb links={links} current={box.title} />
-      <p>{box.description}</p>
-      <h3>Saldo R$ {box.saldo}</h3>
-      <button type="button">Novo Registro</button>
+      <Div>
+        <p>{box.description}</p>
+      </Div>
+      <Container>
+        <h3>Saldo R$ {box.saldo}</h3>
+        <button type="button">Novo Registro</button>
+      </Container>
       <TableInOut registries={box.registries} total={box.saldo} />
     </>
   );
